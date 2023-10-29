@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/CssFiles/company_profile.css}">
+</head>
+<body>
+<h1 style="text-align: center; color: black; font-weight: bold;">Customer Relation Management</h1>
+<h1>Opportunity</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Opportunity Name</th>
+        <th>Account Type</th>
+        <th>Type</th>
+        <th>Opportunity Source</th>
+        <th>Status</th>
+        <th>Progress</th>
+        <th>Opportunities</th>
+        <th>Assumption closed date</th>
+        <th>Owner</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="opportunity : ${listAll}">
+        <td th:text="${opportunity.opportunityName}"></td>
+        <td th:text="${opportunity.accountType}"></td>
+        <td th:text="${opportunity.type}"></td>
+        <td th:text="${opportunity.opportunitySource}"></td>
+        <td th:text="${opportunity.status}"></td>
+        <td th:text="${opportunity.progress}"></td>
+        <td th:text="${opportunity.opportunities}"></td>
+        <td th:text="${opportunity.assumptionClosedDate}"></td>
+        <td th:text="${opportunity.owner}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/CssFiles/company_profile.css}">
+</head>
+<body>
+<h1 style="text-align: center; color: black; font-weight: bold;">Customer Relation Management</h1>
+<h1>View Account</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Account Name</th>
+        <th>Account Type</th>
+        <th>Description</th>
+        <th>Billing Address</th>
+        <th>Owner</th>
+        <th>Phone Number</th>
+        <th>Shipping Address</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iterate through the list of employees and display their information -->
+    <tr th:each="account : ${listAll}">
+        <td th:text="${account.accountName}"></td>
+        <td th:text="${account.accountType}"></td>
+        <td th:text="${account.description}"></td>
+        <td th:text="${account.billingAddress}"></td>
+        <td th:text="${account.owner}"></td>
+        <td th:text="${account.phoneNumber}"></td>
+        <td th:text="${account.shippingAddress}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/CssFiles/company_profile.css}">
+</head>
+
+<body>
+<h1>Employee List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Job Area</th>
+        <th>Report To</th>
+        <th>Email</th>
+        <th>Target Date</th>
+        <th>Target Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iterate through the list of employees and display their information -->
+    <tr th:each="employee : ${listAll}">
+        <td th:text="${employee.employeeId}"></td>
+        <td th:text="${employee.name}"></td>
+        <td th:text="${employee.designation}"></td>
+        <td th:text="${employee.jobArea}"></td>
+        <td th:text="${employee.reportTo}"></td>
+        <td th:text="${employee.email}"></td>
+        <td th:text="${employee.targetDate}"></td>
+        <td th:text="${employee.targetValue}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>

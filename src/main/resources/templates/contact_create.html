@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Relationship Management/title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<link rel="stylesheet" th:href="@{/CssFiles/account.css}">
+<body>
+<h1 style="text-align: center; color: black; font-weight: bold;">Customer Relation Management</h1>
+<div class="container">
+    <h1>Contact Create</h1>
+    <form action="/contact/create" method="post" th:object:${contacts}>
+        <div class="form-group">
+            <label for="title">Name Title</label>
+            <select id="title" name="title" required>
+                <option value="" selected disabled>Select</option>
+                <option value="mr">Mr.</option>
+                <option value="mrs">Mrs.</option>
+                <option value="miss">Miss.</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="designation">Designation</label>
+            <input type="text" id="designation" name="designation" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" required>
+        </div>
+        <div class="form-group">
+            <label for="account">Account</label>
+            <select id="account" name="account" required>
+                <option value="" selected disabled>Select Account</option>
+                <option value="personal">Personal</option>
+                <option value="business">Business</option>
+                <option value="organization">Organization</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="industry">Industry</label>
+            <select id="industry" name="industry" required>
+                <option value="" selected disabled>Select</option>
+                <option value="consulting">Consulting</option>
+                <option value="design">Design</option>
+                <option value="training">Training</option>
+                <option value="development">Development</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="note">Note</label>
+            <textarea id="note" name="note" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="leadOwner">Lead Owner:</label>
+            <select id="leadOwner" name="leadOwner" required>
+                <option value="" selected disabled>Select Owner</option>
+                <option value="Maha">Maha</option>
+                <option value="Sanju">Sanju</option>
+                <option value="bob">Bob</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create Contact">
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Relationship Management</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/CssFiles/dashboard.css}">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-dark bg-primary" >
+    <div class="container-md">
+        <a class="navbar-brand" href="#">Customer Relationship Management</a>
+<!--        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            <i class="fa fa-users"></i> CRM</button>-->
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-user"></i> Mr.Maha
+        </button>
+        <button type="button" class="btn btn-light"><a href="/login"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></button>
+    </div>
+</nav>
+
+<!--#4b4276-->
+
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="/api/company/login"><i class="fas fa-home"></i>Home</a></li>
+
+<!--            <li> <a href="#"><i class="fa fa-users"></i>Employee</a>-->
+                <ul class="nav collapse ms-1 " id="sidemenu" data-bs-parent="#menu">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#" aria-current="page">Emp Basic Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Target</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="/api/company/view-company"><i class="fa fa-table"></i>View Company Profile</a></li>
+            <li><a href="/api/company/add-employee"><i class="fa fa-table"></i>Add Employee Profile</a></li>
+            <li><a href="/api/company/view-employee"><i class="fa fa-table"></i>View Employee Profile</a></li>
+            <li><a href="/api/company/add-target"><i class="fa fa-table"></i>Add Company Target</a></li>
+            <li><a href="/api/company/sales-target"><i class="fa fa-table"></i>Add Employee Target</a></li>
+            <li><a href="https://www.prodevans.com/" class="dropdown-toggle" type="button" id="triggerIdd" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i>Prodevance Profile</a>  </li>
+
+            <li><a href="https://www.prodevans.com/products"><i class="fas fa-project-diagram"></i>products</a></li>
+
+            <li><a href="https://www.prodevans.com/contactus"><i class="fas fa-address-book"></i>Contact</a></li>
+    </div>
+    <div class="main_content">
+        <div class="header"><h4>ADMIN DASHBOARD</h4></div>
+        <div class = "row">
+            <div class="col">
+                <ul>
+                    <img src="https://www.usellcrm.net/wp-content/uploads/2018/11/CRM-Manager-1-e1542032816236.jpg" height="650px" width="1450px">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/CssFiles/company_profile.css}">
+</head>
+
+
+<body>
+<h1>Company List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Company ID</th>
+        <th>Company Name</th>
+        <th>Address</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Default Currency</th>
+        <th>Phone Number</th>
+        <th>Office Number</th>
+        <th>Email</th>
+        <th>Target Date(From)</th>
+        <th>Target Date(To)</th>
+        <th>Target</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iterate through the list of companies and display their information -->
+    <tr th:each="company : ${listAll}">
+        <td th:text="${company.companyId}"></td>
+        <td th:text="${company.companyName}"></td>
+        <td th:text="${company.address}"></td>
+        <td th:text="${company.street}"></td>
+        <td th:text="${company.city}"></td>
+        <td th:text="${company.state}"></td>
+        <td th:text="${company.country}"></td>
+        <td th:text="${company.defaultCurrency}"></td>
+        <td th:text="${company.phoneNumber}"></td>
+        <td th:text="${company.officeNumber}"></td>
+        <td th:text="${company.email}"></td>
+        <td th:text="${company.fromDate}"></td>
+        <td th:text="${company.toDate}"></td>
+        <td th:text="${company.target}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>

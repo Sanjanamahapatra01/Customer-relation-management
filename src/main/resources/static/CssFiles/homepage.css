@@ -1,0 +1,25 @@
+ p{
+        font-size: 3rem;
+        margin-right: 100px;
+        color:black;
+        }
+
+        body{
+         background-color: #e6f7ff;
+        background-image: url(https://th.bing.com/th/id/R.881c49e21ec6f4b777ead46d73cad020?rik=7%2bU0t1b0QJXEeA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f7CkcD3V.jpg&ehk=ib0YQaT88A%2bp2an65FPgLcMmBOjdAog0WKzO%2bwX2Bv0%3d&risl=&pid=ImgRaw&r=0);
+         }
+
+        img{
+        text-align: center;
+       }
+        .form-group{
+        margin-left: 530px;
+        text-align: center;
+        width: 400px;
+        height: 400px;
+        }
+        h5{
+        color:#e6f7ff;
+        }
+
+

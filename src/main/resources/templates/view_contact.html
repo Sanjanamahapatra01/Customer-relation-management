@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/CssFiles/company_profile.css}">
+</head>
+<body>
+<h1 style="text-align: center; color: black; font-weight: bold;">Customer Relation Management</h1>
+<body>
+<h1>View Contact</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name Title</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Designation</th>
+        <th>Department</th>
+        <th>Account</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Industry</th>
+        <th>Note</th>
+        <th>Lead Owner</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iterate through the list of employees and display their information -->
+    <tr th:each="contact : ${listAll}">
+        <td th:text="${contact.title}"></td>
+        <td th:text="${contact.firstName}"></td>
+        <td th:text="${contact.lastName}"></td>
+        <td th:text="${contact.designation}"></td>
+        <td th:text="${contact.department}"></td>
+        <td th:text="${contact.account}"></td>
+        <td th:text="${contact.address}"></td>
+        <td th:text="${contact.phoneNumber}"></td>
+        <td th:text="${contact.email}"></td>
+        <td th:text="${contact.industry}"></td>
+        <td th:text="${contact.note}"></td>
+        <td th:text="${contact.leadOwner}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

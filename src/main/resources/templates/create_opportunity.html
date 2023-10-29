@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CRM</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<link rel="stylesheet" th:href="@{/CssFiles/account.css}">
+<body>
+<h1 style="text-align: center; color: black; font-weight: bold;">Customer Relation Management</h1>
+<div class="container">
+    <h1>Create Opportunity</h1>
+    <form action="/opportunity/create" method="post" th:object="${opportunity}">
+        <div class="form-group">
+            <label for="opportunityName">Opportunity Name:</label>
+            <input type="text" id="opportunityName" name="opportunityName" required>
+        </div>
+        <div class="form-group">
+            <label for="accountType">Account Type:</label>
+            <select id="accountType" name="accountType" required>
+                <option value="" selected disabled>Select Account Type</option>
+                <option value="personal">Personal</option>
+                <option value="business">Business</option>
+                <option value="organization">Organization</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="type">Type:</label>
+            <input id="type" name="type" rows="4" required></input>
+        </div>
+        <div class="form-group">
+            <label for="oportunitySource">Opportunity Source</label>
+            <select id="oportunitySource" name="opportunitySource" required>
+                <option value="" selected disabled>Select</option>
+                <option value="socialmedia">Social Media</option>
+                <option value="website">Website</option>
+                <option value="newspaper">Newspaper</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="" selected disabled>Select Status</option>
+                <option value="initial">Initial</option>
+                <option value="Analysis">Analysis</option>
+                <option value="Presentation">Presentation</option>
+                <option value="Proposal">Proposal</option>
+                <option value="Negotiate">Negotiate</option>
+                <option value="Closed">Closed</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label >Progress:</label>
+            <span class="valuePadding input-holder">
+                <input type="number" max="100" accuracy="2" min="0" name="progress" id="inputMarkUp" style="text-align:left;">
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="opportunities">Opportunities:</label>
+            <input type="number" id="opportunities" name="opportunities" required>
+        </div>
+        <div class="form-group">
+            <label for="date">
+                Assumption Closed Date:</label>
+            <input id="date" class="form-control" name="assumptionClosedDate"
+                   required autofocus="autofocus"
+                   type="date" th:attr="min=${#dates.format(#dates.createToday(), 'yyyy-MM-dd')}" /><br>
+        </div>
+        <div class="form-group">
+            <label for="owner">Owner:</label>
+            <select id="owner" name="owner" required>
+                <option value="" selected disabled>Select Owner</option>
+                <option value="john">Maha</option>
+                <option value="leela">Sanju</option>
+                <option value="bob">Bob</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create Opportunity">
+        </div>
+    </form>
+</div>
+</body>
+</html>

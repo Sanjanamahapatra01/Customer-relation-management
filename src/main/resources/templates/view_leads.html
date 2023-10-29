@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/CssFiles/company_profile.css}">
+</head>
+
+<body>
+<h1>Leads</h1>
+<table>
+    <thead>
+    <tr>
+
+        <th>Name Title</th>
+        <th>Full Name</th>
+        <th>Last Name</th>
+        <th>Lead Owner</th>
+        <th>Designation</th>
+        <th>Target Product</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Company</th>
+        <th>Industry</th>
+        <th>No of Employees</th>
+        <th>Description</th>
+        <th>Lead Source</th>
+        <th>Referred By</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iterate through the list of employees and display their information -->
+    <tr th:each="leads : ${listAll}">
+        <td th:text="${leads.title}"></td>
+        <td th:text="${leads.fullName}"></td>
+        <td th:text="${leads.lastName}"></td>
+        <td th:text="${leads.leadOwner}"></td>
+        <td th:text="${leads.designation}"></td>
+        <td th:text="${leads.product}"></td>
+        <td th:text="${leads.address}"></td>
+        <td th:text="${leads.phoneNumber}"></td>
+        <td th:text="${leads.email}"></td>
+        <td th:text="${leads.company}"></td>
+        <td th:text="${leads.industry}"></td>
+        <td th:text="${leads.noOfEmployees}"></td>
+        <td th:text="${leads.description}"></td>
+        <td th:text="${leads.leadSource}"></td>
+        <td th:text="${leads.referredBy}"></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
